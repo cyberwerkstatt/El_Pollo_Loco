@@ -1,0 +1,489 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/5_background/first_half_background.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    font-size: 45px;
+    position: absolute;
+    top: -20px;
+    color: white;
+}
+
+
+canvas {
+    background-color: black;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0px 0 10px 10px rgba(0, 0, 0, 0.35);
+}
+
+
+.enterFullscreenIcon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+
+.enterFullscreenIcon:hover {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.exitFullscreenIcon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+
+.exitFullscreenIcon:hover {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.positionRelative {
+    position: relative;
+}
+
+
+.startScreenContainer {
+    position: relative;
+}
+
+
+.startScreen {
+    width: 820px;
+    height: 480px;
+    border-radius: 20px;
+}
+
+
+.gameOverScreen {
+    width: 820px;
+    height: 480px;
+    animation: scale-in-center 225ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms both;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+
+.btnContainer {
+    margin-top: -53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btnRestart {
+    background-color: #5f5c4e;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 50px;
+    width: 240px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    animation: scale-in-center 225ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms both;
+}
+
+
+.btnRestart:hover {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.btnMainMenu {
+    background-color: #5f5c4e;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 50px;
+    width: 240px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    animation: scale-in-center 225ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms both;
+}
+
+
+.btnMainMenu:hover {
+    cursor: pointer;
+    transition: 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.keyboardButton {
+    width: 50px;
+    height: 50px;
+    padding-right: 120px;
+    margin-top: 25px;
+    object-fit: contain;
+}
+
+
+.keyboardIcon {
+    font-size: 25px;
+    padding-left: 120px;
+    font-weight: bolder;
+}
+
+
+.audioToggleIcon {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 65px;
+    top: 9px;
+}
+
+
+.audioToggleIcon:hover {
+    cursor: pointer;
+    transition: 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.infoForTheSmartphonDiv {
+    display: flex;
+    justify-content: center;
+}
+
+
+.infoTextSmartphone {
+    color: rgb(255, 238, 0);
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 10px;
+     padding: 10px;
+}
+
+
+.btnPlay {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 13px;
+    right: 89px;
+}
+
+
+.btnPlay:hover {
+    cursor: pointer;
+    transition: 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.positionAbsoluteLeft {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+
+.positionAbsoluteRight {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.btnMobile {
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.containerGameControlls {
+    width: 820px;
+    height: 580px;
+    background-color: #aaa09c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.containerGameControlls h2 {
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.infoIcon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+
+.infoDivContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.infoText {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.containerGameDescription {
+    width: 820px;
+    height: 480px;
+    background-color: #795548;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.containerGameDescription h2 {
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+
+
+.containerGameDescription span {
+    font-size: 18px;
+}
+
+
+.steeringIcon {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+
+.steeringIcon:hover {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.arrowBack {
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.arrowBack:hover {
+    cursor: pointer;
+    transition: all 225ms ease-in-out;
+    transform: scale(1.2);
+}
+
+
+.loadingScreenContainer {
+    width: 820px;
+    height: 480px;
+    background-color: rgb(58, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/*************************** Class only for loading Screen ***************************/
+.hide {
+    display: none;
+}
+
+/*************************** Class only for loading Screen ***************************/
+
+
+.containerWithTextAndIcon {
+    display: flex;
+    align-items: center;
+}
+
+
+.loadingScreenContainer h2 {
+    color: #E7FF4D;
+    font-size: 60px;
+    padding-right: 20px;
+}
+
+
+.loadingScreenContainer img {
+    width: 55px;
+    height: 55px;
+    animation: rotate-center 800ms ease-in-out 800ms infinite both;
+}
+
+
+.winScreenContainer {
+    width: 820px;
+    height: 480px;
+    background-color: #ffffff29;
+    border-radius: 20px;
+}
+
+
+.winScreenContainer h2 {
+    font-size: 35px;
+    padding-top: 15px;
+    margin-top: 0;
+    text-align: center;
+    animation: scale-in-center 225ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms both;
+}
+
+
+.winScreenContainer .btnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 59px;
+}
+
+
+.imgTrophyContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.imgTrophyContainer img {
+    width: 300px;
+    padding-top: 15px;
+    animation: scale-in-center 225ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 100ms both;
+}
+
+
+.d-none {
+    display: none;
+}
+
+/*************************** Classe only for Fullscreen ***************************/
+.canvasFullScreen {
+    width: 100%;
+}
+
+
+.winScreenContainerFullScreen {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 166, 0, 0.459);
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.winScreenContainerFullScreen h2 {
+    padding-top: 180px;
+}
+
+
+.imgTrophyContainerFullScreen img {
+    width: 230px;
+    padding-bottom: 155px;
+}
+
+
+.gameOverScreenContainer {
+    background-image: url("img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.gameOverScreenFullScreen {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*************************** Classe only for Fullscreen ***************************/
+
+
+/*************************** Only Keyframes ***************************/
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*************************** Only Keyframes ***************************/
+
+
+
+/*************************** Hide Touchbutton ***************************/
+
+@media (min-width: 1500px) {
+
+    .positionAbsoluteLeft {
+        display: none;
+    }
+
+    .positionAbsoluteRight {
+        display: none;
+    }
+}
+
+/*************************** Hide Touchbutton ***************************/
