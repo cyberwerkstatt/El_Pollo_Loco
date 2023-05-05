@@ -15,7 +15,9 @@ let audioDeadChicken = new Audio('audio/chickenDeath.mp3');
 let audioBackgroundMusicEndboss = new Audio('audio/EndbossMusic.mp3');
 let intervalIds = [];
 
-
+/**
+ * Game starts
+ */
 
 function startGame() {
     showLoadingScreen();
@@ -33,19 +35,25 @@ function startGame() {
 }
 
 
-
+/**
+ * show loading screen
+ */
 function showLoadingScreen() {
     document.getElementById('loadingScreenContainer').classList.remove('hide');
 }
 
  
-
+/**
+ * close loading screen
+ */
 function closeLoadingScreen() {
     document.getElementById('loadingScreenContainer').classList.add('hide');
 }
 
 
-
+/**
+ * hide Elements in Startscreen
+ */
 function hideElementsInStartScreen() {
     document.getElementById('startScreen').classList.add('d-none');
     document.getElementById('canvas').classList.remove('d-none');
@@ -54,12 +62,17 @@ function hideElementsInStartScreen() {
 }
 
 
-
+/**
+ * show Soundbuttons
+ */
 function showSoundBtns() {
     document.getElementById('audioToggleIcon').classList.remove('d-none');
 }
 
 
+/**
+ * show mobile Buttons
+ */
 
 function showMobileBtns() {
     document.getElementById('positionAbsoluteLeft').classList.remove('d-none');
@@ -68,12 +81,16 @@ function showMobileBtns() {
 }
 
 
-
+/**
+ * Show full screen
+ */
 function showFullscreenBtn() {
     document.getElementById('enterFullscreenIcon').classList.remove('d-none');
 }
 
-
+/**
+ * play backgroundmusic
+ */
 
 function playBackgroundMusic() {
     audioBackgroundMusicInGame.volume = 0.2;
@@ -81,7 +98,9 @@ function playBackgroundMusic() {
     audioBackgroundMusicInGame.loop = true;
 }
 
-
+/**
+ * restart game
+ */
 function restartGame() {
     document.getElementById('gameOverScreenContainer').classList.add('d-none');
     document.getElementById('winScreenContainer').classList.add('d-none');
@@ -95,7 +114,9 @@ function restartGame() {
 }
 
 
-
+/**
+ * Back to startscreen
+ */
 function goBackToStartScreen() {
     clearAllIntervals();
     document.getElementById('canvas').classList.add('d-none');
@@ -111,7 +132,9 @@ function goBackToStartScreen() {
     resetBackgroundMusic();
 }
 
-
+/**
+ * Gameover-Screen
+ */
 
 function showGameOverScreen() {
     setTimeout(() => {
@@ -127,7 +150,9 @@ function showGameOverScreen() {
     }, 1500);
 }
 
-
+/**
+ * Show winscreen
+ */
 
 function showWinScreen() {
     setTimeout(() => {
@@ -143,7 +168,9 @@ function showWinScreen() {
     }, 1500);
 }
 
-
+/**
+ * reset Background Music
+ */
 function resetBackgroundMusic() {
     audioBackgroundMusicInGame.currentTime = 0;
     audioBackgroundMusicEndboss.currentTime = 0;
@@ -164,7 +191,9 @@ function clearAllIntervals() {
     for (let i = 1; i < 9999; i++)  window.clearInterval(i);
 }
 
-
+/**
+ * open fullscreen
+ */
 
 function openFullscreen() {
     let fullScreen = document.getElementById('fullScreen');
@@ -178,7 +207,9 @@ function openFullscreen() {
     addStylesForFullScreen();
 }
 
-
+/**
+ * add styles fullscreen
+ */
 function addStylesForFullScreen() {
     document.getElementById('enterFullscreenIcon').classList.add('d-none');
     document.getElementById('exitFullscreenIcon').classList.remove('d-none');
@@ -190,7 +221,9 @@ function addStylesForFullScreen() {
     document.getElementById('infoForTheSmartphonDiv').classList.add('d-none');
 }
 
-
+/**
+ * close fullscreen
+ */
 
 function closeFullscreen() {
     if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
@@ -206,7 +239,9 @@ function closeFullscreen() {
 }
 
 
-
+/**
+ * remove fullscreen
+ */
 function removeStylesForFullScreen() {
     document.getElementById('enterFullscreenIcon').classList.remove('d-none');
     document.getElementById('exitFullscreenIcon').classList.add('d-none');
@@ -219,7 +254,9 @@ function removeStylesForFullScreen() {
 }
 
 
-
+/**
+ * toggle mute
+ */
 function toggleMute() {
     toggleNoSoundBtn();
     audioBackgroundMusicEndboss.muted = !audioBackgroundMusicEndboss.muted;
@@ -237,7 +274,9 @@ function toggleMute() {
 }
 
 
-
+/**
+ * toggle nosound
+ */
 function toggleNoSoundBtn() {
     let img = document.getElementById('audioToggleIcon').src;
 
@@ -249,7 +288,9 @@ function toggleNoSoundBtn() {
 
 }
 
-
+/**
+ * open menu
+ */
 
 function openSteeringMenu() {
     document.getElementById('startScreen').classList.add('d-none');
@@ -264,7 +305,9 @@ function openSteeringMenu() {
 }
 
 
-
+/**
+ * close menu
+ */
 function closeSteeringMenu() {
     document.getElementById('containerGameControlls').classList.add('d-none');
     document.getElementById('arrowBackGameControlls').classList.add('d-none');

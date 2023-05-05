@@ -103,7 +103,9 @@ class Character extends MovableObject {
         this.scrollTheMap();
     }
 
-
+    /**
+     * Scrolling the map
+     */
     scrollTheMap() {
         this.world.camera_x = -this.x + 130;
     }
@@ -129,24 +131,28 @@ class Character extends MovableObject {
         }
     }
 
-
+    
     characterCanMoveRight() {
         return this.world.keyboard.right && this.x < this.world.level.levelEndX;
     }
 
-
+    /**
+     * Character moves right
+     */
     characterMoveRight() {
         this.otherDirection = false;
         this.moveRight();
         audioWalkCharacter.play();
     }
 
-
+     
     characterCanMoveLeft() {
         return this.world.keyboard.left && this.x > 0;
     }
 
-
+    /**
+     * Character moves left
+     */
     characterMoveLeft() {
         this.otherDirection = true;
         this.moveLeft();
@@ -158,7 +164,9 @@ class Character extends MovableObject {
         return this.world.keyboard.space && !this.isAboveGround();
     }
 
-
+    /**
+     * Character jumps
+     */
     characterJump() {
         this.jump();
         audioJumpCharacter.play();
@@ -189,6 +197,9 @@ class Character extends MovableObject {
     }
 
 
+    /**
+     * Character sleeps
+     */
     characterSleep() {
         let timepassed = new Date().getTime() - this.characterLastMovement;
         timepassed = timepassed / 2000;
