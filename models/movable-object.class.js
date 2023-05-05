@@ -57,19 +57,25 @@ class MovableObject extends DrawableObject {
     }
 
 
-    
+    /**
+     * raising progressbar
+     */    
     raiseProgressbarCoin() {
         this.progessCoinBar += 5;
     }
 
 
-   
+   /**
+     * raising progressbar Bottle
+     */  
     raiseProgressbarBottle() {
         this.progessBottleBar += 10;
     }
 
 
-   
+    /**
+     * reduceProgressbarBottleThroughThrow
+     */  
     reduceProgressbarBottleThroughThrow() {
         this.progessBottleBar -= 10;
     }
