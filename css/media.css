@@ -9,6 +9,8 @@
     }
 }
 
+
+
 @media (max-width: 1260px) {
     .winScreenContainer .btnContainer {
         justify-content: space-between;
@@ -270,7 +272,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 790px) {
     .btnPlay {
         width: 28px;
         height: 28px;
